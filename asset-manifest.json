@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/imgiftmaker/static/css/main.40602899.chunk.css",
-    "main.js": "/imgiftmaker/static/js/main.418c504d.chunk.js",
-    "main.js.map": "/imgiftmaker/static/js/main.418c504d.chunk.js.map",
+    "main.css": "/imgiftmaker/static/css/main.c045b9c3.chunk.css",
+    "main.js": "/imgiftmaker/static/js/main.82e0325b.chunk.js",
+    "main.js.map": "/imgiftmaker/static/js/main.82e0325b.chunk.js.map",
     "runtime-main.js": "/imgiftmaker/static/js/runtime-main.587c8680.js",
     "runtime-main.js.map": "/imgiftmaker/static/js/runtime-main.587c8680.js.map",
     "static/js/2.d83bc574.chunk.js": "/imgiftmaker/static/js/2.d83bc574.chunk.js",
     "static/js/2.d83bc574.chunk.js.map": "/imgiftmaker/static/js/2.d83bc574.chunk.js.map",
     "index.html": "/imgiftmaker/index.html",
-    "precache-manifest.f03e688dd2f669d0fb3b46a2a1e5c2c8.js": "/imgiftmaker/precache-manifest.f03e688dd2f669d0fb3b46a2a1e5c2c8.js",
+    "precache-manifest.300ea6a061840c305bc0c2b232afe79b.js": "/imgiftmaker/precache-manifest.300ea6a061840c305bc0c2b232afe79b.js",
     "service-worker.js": "/imgiftmaker/service-worker.js",
-    "static/css/main.40602899.chunk.css.map": "/imgiftmaker/static/css/main.40602899.chunk.css.map",
+    "static/css/main.c045b9c3.chunk.css.map": "/imgiftmaker/static/css/main.c045b9c3.chunk.css.map",
     "static/js/2.d83bc574.chunk.js.LICENSE": "/imgiftmaker/static/js/2.d83bc574.chunk.js.LICENSE",
     "static/media/a1ebot.png": "/imgiftmaker/static/media/a1ebot.fcac26c2.png",
     "static/media/a1etxt.png": "/imgiftmaker/static/media/a1etxt.3ef71c54.png",
@@ -47,7 +47,7 @@
   "entrypoints": [
     "static/js/runtime-main.587c8680.js",
     "static/js/2.d83bc574.chunk.js",
-    "static/css/main.40602899.chunk.css",
-    "static/js/main.418c504d.chunk.js"
+    "static/css/main.c045b9c3.chunk.css",
+    "static/js/main.82e0325b.chunk.js"
   ]
 }

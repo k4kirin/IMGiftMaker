@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ef163e85d4e2f045fc431a45e3856888",
+    "revision": "8a39d05416647b102fe74b210bb44c23",
     "url": "/imgiftmaker/index.html"
   },
   {
-    "revision": "2e51ba864e223967ca0f",
-    "url": "/imgiftmaker/static/css/main.40602899.chunk.css"
+    "revision": "45d38ab7698b2b155b87",
+    "url": "/imgiftmaker/static/css/main.c045b9c3.chunk.css"
   },
   {
     "revision": "5099f0ee7aef8b4fc96b",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/imgiftmaker/static/js/2.d83bc574.chunk.js.LICENSE"
   },
   {
-    "revision": "2e51ba864e223967ca0f",
-    "url": "/imgiftmaker/static/js/main.418c504d.chunk.js"
+    "revision": "45d38ab7698b2b155b87",
+    "url": "/imgiftmaker/static/js/main.82e0325b.chunk.js"
   },
   {
     "revision": "e6f6e6544abfd3726fef",
