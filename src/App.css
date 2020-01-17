@@ -50,6 +50,9 @@ body{
 	align-items: center;
 	justify-content: center;
 }
+canvas{
+	-webkit-tap-highlight-color: transparent;
+}
 .board-row:after {
   clear: both;
   content: "";
