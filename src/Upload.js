@@ -8,7 +8,7 @@ npm start
 cd desktop/coding stuff/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version 1.2.0"
+git commit -m "Version 1.2.2"
 git push origin master
 
 */
@@ -164,9 +164,7 @@ class Editor extends React.Component{
 		}
 		this.displayImage.push(createImage(img[this.imgName.wtrName]));
 	}
-	stackImages(cardCanvas,ctx,i,rotatedUpload){
-		// if(i==1)return;
-		this.refreshed = false;
+	stackImages(cardCanvas,ctx,i){
 		var width, height;
 		const isI = (element) => element == i;
 		width=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
@@ -176,7 +174,6 @@ class Editor extends React.Component{
 			ctx.translate(this.state.rotateResult?-cardCanvas.width:-cardCanvas.height,0);
 			width=this.state.rotateResult?cardCanvas.width:cardCanvas.height;
 			height=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
-			rotatedUpload = true;
 		}
 		var thisImage = this.displayImage[i];
 		new Promise( (resolve,reject) => {
@@ -188,13 +185,12 @@ class Editor extends React.Component{
 			   if(this.state.rotateUpload && this.uploadNumber.some(isI)){
 					ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
 					ctx.rotate(90*Math.PI/180);
-					rotatedUpload = false;
 				}
 				resolve();
 			};
 		}).then( () => {
 		   if(i<this.displayImage.length-1)
-			   this.stackImages(cardCanvas,ctx,i+1,rotatedUpload);
+			   this.stackImages(cardCanvas,ctx,i+1);
 		})
 	}
 	updateImgName(){
@@ -223,6 +219,7 @@ class Editor extends React.Component{
 		this.imgName = imgName;
 	}
 	updateCanvas(){
+			this.refreshed = false;
 		const cardCanvas=this.refs.cardCanvas;
 		const ctx=cardCanvas.getContext("2d");
 		this.imagePusher();
@@ -240,7 +237,7 @@ class Editor extends React.Component{
 				ctx.rotate(rotateValue);
 			}
 		}
-		this.stackImages(cardCanvas,ctx,0,false);
+		this.stackImages(cardCanvas,ctx,0);
 	}
 	updateEditor(){
 		this.updateImgName();
@@ -315,12 +312,11 @@ class Editor extends React.Component{
 		this.refreshed = true;
 	}
 	handleSave(){
-		if(!this.refreshed){
-			this.updateEditor();
-			this.refreshed=true;
+		if(this.refreshed){
+			window.location.href=this.canvasData;
 		}
 		else
-			window.location.href=this.canvasData;
+			this.handleRefresh();
 	}
 	renderBoard(namesArray,opt){
 		return(
