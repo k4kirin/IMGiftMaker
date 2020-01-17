@@ -8,7 +8,7 @@ npm start
 cd desktop/coding stuff/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version 1.2.7"
+git commit -m "Version 1.2.8"
 git push origin master
 
 */
@@ -181,6 +181,18 @@ class Editor extends React.Component{
 				ctx.drawImage(thisImage, 0, 0, width, height);
 			   if (i==this.displayImage.length-1){
 					this.canvasData = cardCanvas.toDataURL("image/png");
+					cardCanvas.toBlob((blob) => {
+					  var newImg = document.createElement('img'),
+						  url = URL.createObjectURL(blob);
+
+					  newImg.onload = () => {
+						// no longer need to read the blob so it's revoked
+						URL.revokeObjectURL(url);
+					  };
+
+					  newImg.src = url;
+					  document.body.appendChild(newImg);
+					});
 			   }
 			   if(this.state.rotateUpload && this.uploadNumber.some(isI)){
 					ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
@@ -380,7 +392,7 @@ class Editor extends React.Component{
 							ref="cardCanvas"
 							width="350"
 							height="510"
-							alt="Gift"
+							href="https://stackoverflow.com/questions/6215841/create-links-in-html-canvas"
 						/>
 					</div>
 			</div>

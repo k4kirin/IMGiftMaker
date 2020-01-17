@@ -52,7 +52,6 @@ body{
 }
 canvas{
 	-webkit-tap-highlight-color: transparent;
-	touch-action: none;
 }
 .board-row:after {
   clear: both;
