@@ -164,26 +164,28 @@ class Editor extends React.Component{
 		}
 		this.displayImage.push(createImage(img[this.imgName.wtrName]));
 	}
-	stackImages(cardCanvas,ctx,i){
+	stackImages(cardCanvas,ctx,i,rotatedUpload){
 		this.refreshed = false;
 		var width, height;
 		const isI = (element) => element == i;
 		width=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
 		height=this.state.rotateResult?cardCanvas.width:cardCanvas.height;
-		if(this.state.rotateUpload && this.uploadNumber.some(isI)){
+		if(this.state.rotateUpload && this.uploadNumber.some(isI) && !rotatedUpload){
 			ctx.rotate(-90*Math.PI/180);
 			ctx.translate(this.state.rotateResult?-cardCanvas.width:-cardCanvas.height,0);
 			width=this.state.rotateResult?cardCanvas.width:cardCanvas.height;
 			height=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
+			rotatedUpload = true;
+		}
+		else if(this.state.rotateUpload && !this.uploadNumber.some(isI) && rotatedUpload){
+			ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
+			ctx.rotate(90*Math.PI/180);
+			rotatedUpload = false;
 		}
 		var thisImage = this.displayImage[i];
 		new Promise( () => {
 			thisImage.onload = () => {
 				ctx.drawImage(thisImage, 0, 0, width, height);
-				if(this.state.rotateUpload && this.uploadNumber.some(isI)){
-					ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
-					ctx.rotate(90*Math.PI/180);
-				}
 			   if (i==this.displayImage.length-1){
 					this.canvasData = cardCanvas.toDataURL("image/png");
 			   }
@@ -191,7 +193,7 @@ class Editor extends React.Component{
 			resolve();
 		}).then( () => {
 		   if(i<this.displayImage.length-1)
-			   this.stackImages(cardCanvas,ctx,i+1);
+			   this.stackImages(cardCanvas,ctx,i+1,rotatedUpload);
 		})
 	}
 	updateImgName(){
@@ -237,7 +239,7 @@ class Editor extends React.Component{
 				ctx.rotate(rotateValue);
 			}
 		}
-		this.stackImages(cardCanvas,ctx,0);
+		this.stackImages(cardCanvas,ctx,0,false);
 	}
 	updateEditor(){
 		this.updateImgName();
