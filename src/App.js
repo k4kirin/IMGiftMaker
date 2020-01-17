@@ -26,9 +26,12 @@ export default class App extends Component {
 	<h2>Imaginary Gift Maker</h2>
 	<img src={img['logo.png']} className="App-logo" />
   </header>
-        <div className='buttons'>
+        <div>
           {content()}
         </div>
+			<div style={{alignItems: "center",justifyContent: "center"}}>
+			<br/><small><b>16 Jan 2020</b>: If you like my work, and would like to donate to me, please instead donate to help
+				fight Australian wildfires <a href="https://fundraise.redcross.org.au/drr">here</a>.</small><br/><br/><br/></div>
       </div>
     )
   }
