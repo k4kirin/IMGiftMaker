@@ -5,6 +5,10 @@ cd desktop/coding stuff/react/imgiftmaker
 
 npm start
 
+npm run deploy
+git push .
+git commit -m "
+
 */
 function importAll(r) {
   let img = {};
@@ -323,7 +327,7 @@ class Editor extends React.Component{
 			<div>
 				<b>Select your Gift type:</b>
 				<br/>
-				{this.renderBoard(["Force I","Protect I","Accel I","Force II","Protect II","Accel II"],"type")}
+				{this.renderBoard(["Force I","Force II","Accel I","Accel II","Protect I","Protect II"],"type")}
 				<b>Select card language:</b>
 				<br/>
 				{this.renderBoard(["English","Japanese"],"language")}
