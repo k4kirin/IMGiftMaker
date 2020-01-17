@@ -8,7 +8,7 @@ npm start
 cd desktop/coding stuff/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version 1.1.5"
+git commit -m "Version 1.2.0"
 git push origin master
 
 */
@@ -311,8 +311,8 @@ class Editor extends React.Component{
 
 	}
 	handleRefresh(){
-		this.refreshed = true;
 		this.updateEditor();
+		this.refreshed = true;
 	}
 	handleSave(){
 		if(!this.refreshed){
