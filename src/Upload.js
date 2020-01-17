@@ -8,7 +8,7 @@ npm start
 cd desktop/coding stuff/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version 1.1.4"
+git commit -m "Version 1.1.5"
 git push origin master
 
 */
@@ -165,32 +165,33 @@ class Editor extends React.Component{
 		this.displayImage.push(createImage(img[this.imgName.wtrName]));
 	}
 	stackImages(cardCanvas,ctx,i,rotatedUpload){
+		// if(i==1)return;
 		this.refreshed = false;
 		var width, height;
 		const isI = (element) => element == i;
 		width=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
 		height=this.state.rotateResult?cardCanvas.width:cardCanvas.height;
-		if(this.state.rotateUpload && this.uploadNumber.some(isI) && !rotatedUpload){
+		if(this.state.rotateUpload && this.uploadNumber.some(isI)){
 			ctx.rotate(-90*Math.PI/180);
 			ctx.translate(this.state.rotateResult?-cardCanvas.width:-cardCanvas.height,0);
 			width=this.state.rotateResult?cardCanvas.width:cardCanvas.height;
 			height=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
 			rotatedUpload = true;
 		}
-		else if(this.state.rotateUpload && !this.uploadNumber.some(isI) && rotatedUpload){
-			ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
-			ctx.rotate(90*Math.PI/180);
-			rotatedUpload = false;
-		}
 		var thisImage = this.displayImage[i];
-		new Promise( () => {
+		new Promise( (resolve,reject) => {
 			thisImage.onload = () => {
 				ctx.drawImage(thisImage, 0, 0, width, height);
 			   if (i==this.displayImage.length-1){
 					this.canvasData = cardCanvas.toDataURL("image/png");
 			   }
+			   if(this.state.rotateUpload && this.uploadNumber.some(isI)){
+					ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
+					ctx.rotate(90*Math.PI/180);
+					rotatedUpload = false;
+				}
+				resolve();
 			};
-			resolve();
 		}).then( () => {
 		   if(i<this.displayImage.length-1)
 			   this.stackImages(cardCanvas,ctx,i+1,rotatedUpload);
