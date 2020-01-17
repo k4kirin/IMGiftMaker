@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/imgiftmaker/precache-manifest.729ff1c5dae7fb638b67359748bacdaa.js"
+  "/imgiftmaker/precache-manifest.8ce86bead83a293a8a8a35252a9b7ec0.js"
 );
 
 self.addEventListener('message', (event) => {
