@@ -34,8 +34,7 @@ export default class App extends Component {
 			This website is not affliated in any way to Bushiroad. Cardfight!! Vanguard belongs to Bushiroad.
 			<br/><small><b>16 Jan 2020</b>: If you like my work, and would like to donate to me, please instead donate to help
 				fight Australian wildfires <a href="https://fundraise.redcross.org.au/drr">here</a>.</small><br/><br/><br/></div>
-	  <br/>
-	  <b>History:</b><br/></div>
+	  <br/></div>
     )
   }
 
