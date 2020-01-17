@@ -5,9 +5,11 @@ cd desktop/coding stuff/react/imgiftmaker
 
 npm start
 
+cd desktop/coding stuff/react/imgiftmaker
 npm run deploy
-git push .
-git commit -m "
+git add .
+git commit -m "Version "
+git push origin master
 
 */
 function importAll(r) {
