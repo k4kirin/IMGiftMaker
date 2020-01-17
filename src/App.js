@@ -35,6 +35,8 @@ export default class App extends Component {
 			<br/><small><b>16 Jan 2020</b>: If you like my work, and would like to donate to me, please instead donate to help
 				fight Australian wildfires <a href="https://fundraise.redcross.org.au/drr">here</a>.</small><br/><br/><br/></div>
       </div>
+	  <br/>
+	  <b>History:</b><br/>
     )
   }
 
