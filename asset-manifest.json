@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/imgiftmaker/static/css/main.4192dbe6.chunk.css",
-    "main.js": "/imgiftmaker/static/js/main.10102a0b.chunk.js",
-    "main.js.map": "/imgiftmaker/static/js/main.10102a0b.chunk.js.map",
+    "main.js": "/imgiftmaker/static/js/main.c91b23bc.chunk.js",
+    "main.js.map": "/imgiftmaker/static/js/main.c91b23bc.chunk.js.map",
     "runtime-main.js": "/imgiftmaker/static/js/runtime-main.587c8680.js",
     "runtime-main.js.map": "/imgiftmaker/static/js/runtime-main.587c8680.js.map",
     "static/js/2.d83bc574.chunk.js": "/imgiftmaker/static/js/2.d83bc574.chunk.js",
     "static/js/2.d83bc574.chunk.js.map": "/imgiftmaker/static/js/2.d83bc574.chunk.js.map",
     "index.html": "/imgiftmaker/index.html",
-    "precache-manifest.e503c97362409596c774d71b9bdb6265.js": "/imgiftmaker/precache-manifest.e503c97362409596c774d71b9bdb6265.js",
+    "precache-manifest.a2708a16793dc327cd4279fb586772cf.js": "/imgiftmaker/precache-manifest.a2708a16793dc327cd4279fb586772cf.js",
     "service-worker.js": "/imgiftmaker/service-worker.js",
     "static/css/main.4192dbe6.chunk.css.map": "/imgiftmaker/static/css/main.4192dbe6.chunk.css.map",
     "static/js/2.d83bc574.chunk.js.LICENSE": "/imgiftmaker/static/js/2.d83bc574.chunk.js.LICENSE",
@@ -48,6 +48,6 @@
     "static/js/runtime-main.587c8680.js",
     "static/js/2.d83bc574.chunk.js",
     "static/css/main.4192dbe6.chunk.css",
-    "static/js/main.10102a0b.chunk.js"
+    "static/js/main.c91b23bc.chunk.js"
   ]
 }
