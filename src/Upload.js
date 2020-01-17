@@ -8,7 +8,7 @@ npm start
 cd desktop/coding stuff/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version "
+git commit -m "Version 1.1.4"
 git push origin master
 
 */
@@ -177,18 +177,22 @@ class Editor extends React.Component{
 			height=this.state.rotateResult?cardCanvas.height:cardCanvas.width;
 		}
 		var thisImage = this.displayImage[i];
-		thisImage.onload = () => {
-			ctx.drawImage(thisImage, 0, 0, width, height);
-			if(this.state.rotateUpload && this.uploadNumber.some(isI)){
-				ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
-				ctx.rotate(90*Math.PI/180);
-			}
-		   if (i==this.displayImage.length-1){
-				this.canvasData = cardCanvas.toDataURL("image/png");
-		   }
-		};
+		new Promise( () => {
+			thisImage.onload = () => {
+				ctx.drawImage(thisImage, 0, 0, width, height);
+				if(this.state.rotateUpload && this.uploadNumber.some(isI)){
+					ctx.translate(this.state.rotateResult?cardCanvas.width:cardCanvas.height,0);
+					ctx.rotate(90*Math.PI/180);
+				}
+			   if (i==this.displayImage.length-1){
+					this.canvasData = cardCanvas.toDataURL("image/png");
+			   }
+			};
+			resolve();
+		}).then( () => {
 		   if(i<this.displayImage.length-1)
 			   this.stackImages(cardCanvas,ctx,i+1);
+		})
 	}
 	updateImgName(){
 		var keys=Object.keys(this.imgName);
