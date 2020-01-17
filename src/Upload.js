@@ -62,8 +62,8 @@ class Board extends React.Component {
 	var results=[];
 	for (var i=0;i<this.state.names.length;i++){
 		results.push(this.renderSquare(i));
-		if(i%3==2)
-			results.push(<br/>);
+		// if(i%3==2)
+			// results.push(<br/>);
 	}
 	  return(
 		<div>
@@ -331,15 +331,15 @@ class Editor extends React.Component{
 				<br/>
 				<div id="hori-box">
 					<div id="row-box">
-						Top border: &nbsp;
+						Top border:
 						{this.renderBoard(["Yes","Behind image","No"],"top")}
 					</div>&nbsp;
 					<div id="row-box">
-						Bottom border: &nbsp;
+						Bottom border:
 						{this.renderBoard(["Yes","Behind image","No"],"bot")}
 					</div>&nbsp;
 					<div id="row-box">
-						Card text: &nbsp;
+						Card text:
 						{this.renderBoard(["Yes","No"],"txt")}
 					</div>
 				</div>
