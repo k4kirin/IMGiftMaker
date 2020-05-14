@@ -7,7 +7,9 @@ Well, now you can do that, and more, with k4kirin's Imaginary Gift Maker!
 You can use this simple(?) tool to create your own original Imaginary Gifts! All you need is a photo or two, and you're set!
 
 Make any type of gift in English or Japanese!
+
 ==Instructions==
+
 '''Type: '''Choose which type of Gift you want. Both I and II are supported!
 
 '''Language: '''English or Japanese
