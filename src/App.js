@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Author from './Author'
 import Upload from './Upload'
 import './App.css';
 
@@ -14,13 +15,16 @@ export default class App extends Component {
     const content = () => {
       switch(true) {
         default:
-          return <Upload onChange={this.onChange} />
+          return (
+			<Upload onChange={this.onChange} />
+			);
       }
     }
 
     return (
       <div>
 	  
+			<Author/>
   <header className="App-header">
 	k4kirin's&nbsp;<br/>         
 	<h2>Imaginary Gift Maker</h2>

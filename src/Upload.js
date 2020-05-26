@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 /*
-cd desktop/coding stuff/react/imgiftmaker
+cd desktop/coding/react/imgiftmaker
 
 npm start
 
-cd desktop/coding stuff/react/imgiftmaker
+cd desktop/coding/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version 1.3.1"
+git commit -m "Version 1.3.2"
 git push origin master
 
 */
