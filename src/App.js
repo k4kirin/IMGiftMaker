@@ -37,6 +37,7 @@ export default class App extends Component {
 			<br/>
 			This website is not affliated in any way to Bushiroad. Cardfight!! Vanguard belongs to Bushiroad.
 			</div>
+			</div>
     )
   }
 
