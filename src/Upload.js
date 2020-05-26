@@ -8,7 +8,7 @@ npm start
 cd desktop/coding/react/imgiftmaker
 npm run deploy
 git add .
-git commit -m "Version 1.3.2"
+git commit -m "Version 1.3.3"
 git push origin master
 
 */
